@@ -7,6 +7,7 @@ using helloWorld.Data;
 using helloWorld.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace helloWorld
 {
@@ -14,7 +15,9 @@ namespace helloWorld
     {
         static void Main(string[] args)
         {
-            DataContextEF dataContextEf = new DataContextEF();
+            IConfiguration configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+
+            DataContextEF dataContextEf = new DataContextEF(configuration);
 
             Computer computer = new Computer()
             {
