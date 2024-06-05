@@ -1,18 +1,25 @@
 using helloWorld.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace helloWorld.Data;
 
 public class DataContextEF : DbContext
 {
+    private string _connectionString;
+
+    public DataContextEF(IConfiguration configuration)
+    {
+        _connectionString = configuration.GetConnectionString("DefaultConnection");
+    }
+
     public DbSet<Computer>? Computers { get; set; }
-    
+
     protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
     {
         if (!dbContextOptionsBuilder.IsConfigured)
         {
-            dbContextOptionsBuilder.UseSqlServer(
-                "Server=localhost,1433;Database=dotNetCourse;TrustServerCertificate=true;Trusted_Connection=True",
+            dbContextOptionsBuilder.UseSqlServer(_connectionString,
                 dbContextOptionsBuilder => dbContextOptionsBuilder.EnableRetryOnFailure());
         }
     }

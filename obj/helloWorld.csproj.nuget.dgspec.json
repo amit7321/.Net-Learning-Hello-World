@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects and Codes\\.Net\\console_application_demo\\helloWorld\\helloWorld.csproj": {}
+    "E:\\Projects\\.net\\Hello-World\\helloWorld.csproj": {}
   },
   "projects": {
-    "D:\\Projects and Codes\\.Net\\console_application_demo\\helloWorld\\helloWorld.csproj": {
+    "E:\\Projects\\.net\\Hello-World\\helloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects and Codes\\.Net\\console_application_demo\\helloWorld\\helloWorld.csproj",
+        "projectUniqueName": "E:\\Projects\\.net\\Hello-World\\helloWorld.csproj",
         "projectName": "helloWorld",
-        "projectPath": "D:\\Projects and Codes\\.Net\\console_application_demo\\helloWorld\\helloWorld.csproj",
-        "packagesPath": "C:\\Users\\GUNNER73\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects and Codes\\.Net\\console_application_demo\\helloWorld\\obj\\",
+        "projectPath": "E:\\Projects\\.net\\Hello-World\\helloWorld.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\.net\\Hello-World\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GUNNER73\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {
@@ -32,6 +33,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -45,6 +51,14 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "microsoft.data.sqlclient": {
               "target": "Package",
